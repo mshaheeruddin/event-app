@@ -5,6 +5,7 @@ import Button from "@/components/ui/button";
 import ErrorAlert from "@/components/ui/error-alert";
 import { getEventById, getAllEvents, getFeaturedEvents } from "../../helpers/api-utils";
 import { Fragment } from "react";
+import Comments from "@/components/input/comments";
 
 function EventDetailPage(props) {
   const event = props.selectedEvent;
@@ -29,6 +30,7 @@ function EventDetailPage(props) {
       <EventContent>
         <p>{event.description}</p>
       </EventContent>
+      <Comments eventId={event.id}/>
     </Fragment>
   );
 }
